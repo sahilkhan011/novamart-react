@@ -1,0 +1,127 @@
+/* styles.module.css */
+
+.footer {
+  /* margin: 30px 0px; */
+  background: #15161d;
+  color: #b9babc;
+  border-top: 5px solid #d10024;
+  margin-top: 5px;
+  padding: 15px;
+}
+
+.footerTitle {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0px 0px 30px;
+}
+
+/* Add these styles to your CSS file */
+
+.aboutLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aboutLinks li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth transition for color change on hover */
+}
+
+.aboutLinks li svg {
+  margin-right: 10px;
+}
+
+.aboutLinks li:hover {
+  color: #d10024; /* Change color on hover */
+}
+
+/*  */
+/* Add these styles to your CSS file */
+
+.usefulLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.usefulLinks li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background-color and text color changes on hover */
+}
+
+.usefulLinks li svg {
+  margin-right: 10px;
+}
+
+.usefulLinks li a {
+  text-decoration: none;
+  color: #fff; /* Default text color */
+}
+
+.usefulLinks li:hover a {
+  color: #d10024 !important; /* Change text color on hover */
+}
+
+/*  */
+
+/* Add these styles to your CSS file */
+
+.SocialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SocialLinks a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #333; /* Default text color */
+  margin-right: 10px; /* Adjust as needed */
+  padding: 8px; /* Adjust as needed */
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background-color and text color changes on hover */
+}
+
+.SocialLinks a svg {
+  width: 24px; /* Adjust as needed */
+  height: 24px; /* Adjust as needed */
+}
+.SocialLinks a:hover {
+  background-color: #d10024; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/*  */
+
+/* Add these styles to your CSS file */
+
+.downlodImages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.downlodImages img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.downlodImages a {
+  text-decoration: none;
+}
+
+/*  */

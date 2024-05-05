@@ -1,0 +1,51 @@
+.categoryContainer {
+  overflow: auto;
+  white-space: nowrap;
+  /* Set a specific width for the container */
+  width: 100%; /* You can adjust the width as needed */
+  /* Add any additional container-specific styles */
+}
+
+/* WebKit browsers (Chrome, Safari) scrollbar styling */
+.categoryContainer::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.categoryContainer::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.categoryContainer > div {
+  display: inline-block;
+}
+
+.navItem {
+  width: 85px;
+  /* Add any additional module-specific styles */
+  text-align: center;
+}
+
+.navImage {
+  margin: 5px;
+  /* Add any additional module-specific styles */
+  width: 70px;
+  aspect-ratio: 1/1;
+  /* border-radius: 50%;
+  overflow: hidden;  Ensure the border-radius works */
+}
+.navImage img {
+  height: 100%;
+  width: 100%;
+}
+
+.navName {
+  font-size: 12px;
+  margin: 5px;
+  font-weight: 500;
+  /* Add any additional module-specific styles */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Set a specific width for the container */
+  width: 75px; /* You can adjust the width as needed */
+}

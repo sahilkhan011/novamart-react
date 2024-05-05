@@ -1,0 +1,222 @@
+.productGrid {
+  position: relative;
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  transition: all 0.7s ease 0s;
+  margin-bottom: 50px;
+}
+.productGrid .product {
+  position: relative;
+  z-index: 2;
+}
+
+.productGrid:hover .product {
+  border: 2px solid #d10024;
+}
+.productGrid:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15), 10px 10px rgba(0, 0, 0, 0.05);
+}
+.productGrid .productImage {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.productGrid .productImage a.image {
+  display: block;
+}
+.productGrid .productImage img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.productGrid .productImage .pic1 {
+  transition: all 200ms ease 0s;
+}
+.productGrid .productImage:hover .pic1 {
+  opacity: 0;
+}
+.productGrid .productImage .pic2 {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 3s;
+}
+.productGrid .productImage:hover .pic2 {
+  opacity: 1;
+  transform: scale(1.5);
+}
+.productGrid .productLabel {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.productGrid .productLabel .newLabel {
+  color: #fff;
+  background: #d10024;
+  padding: 3px 3px;
+  margin: 1px;
+}
+.productGrid .productLabel .saleLabel {
+  color: #d10024;
+  background: #fff;
+  border: 1px solid #d10024;
+  padding: 3px 3px;
+  margin: 1px;
+}
+.productGrid .productLinks {
+  background: #f1f1f1;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  transform: scaleX(2);
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  transition: all 0.5s ease-in-out 0s;
+}
+.productGrid:hover .productLinks {
+  opacity: 1;
+  transform: scaleX(1);
+  bottom: 0;
+}
+.productGrid .productLinks li {
+  margin: 0 -2px;
+  display: inline-block;
+}
+.productGrid .productLinks li a {
+  color: #444;
+  font-size: 16px;
+  line-height: 41px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: relative;
+  transition: all 0.2s ease-out;
+}
+.productGrid .productLinks li a:hover {
+  color: #fff;
+  background-color: #d10024;
+}
+.productGrid .productLinks li a:before,
+.productGrid .productLinks li a:after {
+  content: attr(data-tip);
+  color: #fff;
+  background-color: #222;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  display: none;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transition: all 0.3s;
+}
+.productGrid .productLinks li a:after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  transform: translateX(-50%) rotate(45deg);
+  top: -25px;
+  z-index: -1;
+}
+.productGrid .productLinks li a:hover:before,
+.productGrid .productLinks li a:hover:after {
+  display: block;
+}
+.productGrid .productContent {
+  background: #fff;
+  padding: 15px 12px;
+  position: relative;
+}
+
+.productGrid .addToCart i.fas {
+  font-size: 14px;
+  margin: 0 5px 0 0;
+}
+.productGrid .title {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin: 0 0 10px;
+}
+.productGrid .title a {
+  color: #444;
+}
+
+.productGrid .rating {
+  color: #1c1a19;
+  font-size: 12px;
+  padding: 0;
+  margin: 0 0 11px;
+  list-style: none;
+}
+.productGrid .price {
+  color: #d10024;
+  font-size: 16px;
+  font-weight: 700;
+}
+.productGrid .price span {
+  margin-left: 5px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 100;
+  text-decoration: line-through;
+}
+@media screen and (max-width: 990px) {
+  .productGrid {
+    margin: 0 0 30px;
+  }
+}
+
+.productGrid .addToCart,
+.productGrid .title a {
+  text-decoration: none;
+}
+
+.productGrid .bottomAddtoCart {
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  padding: 5px;
+  background: #1e1f29;
+  text-align: center;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  z-index: 1;
+}
+.productGrid .bottomAddtoCart button {
+  background-color: #fff;
+  color: #d10024;
+  padding: 5px 10px;
+  border: 2px solid #d10024;
+  border-radius: 5px;
+}
+.productGrid .bottomAddtoCart button:hover {
+  background-color: #d10024;
+  color: #fff;
+}
+
+.productGrid:hover .bottomAddtoCart {
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
