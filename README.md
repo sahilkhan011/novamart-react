@@ -86,3 +86,11 @@ npm run dev
 - `eslint-plugin-react-hooks`: ESLint plugin for React Hooks linting rules.
 - `eslint-plugin-react-refresh`: ESLint plugin for React Refresh support.
 - `vite`: Next generation frontend tooling.
+
+## Contributing
+
+Contributions are welcome! Please feel free to fork the repository and submit pull requests to contribute new features, enhancements, or bug fixes. For major changes, please open an issue first to discuss the proposed changes.
+
+## License
+
+This project is licensed under the MIT License.
