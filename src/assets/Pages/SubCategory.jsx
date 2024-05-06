@@ -1,9 +1,8 @@
 import Container from "../../Components/Container/Container";
-import { Link, useParams } from "react-router-dom";
-import { FaArrowCircleRight } from "react-icons/fa";
-import styles from "./subcategory.module.css";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import SubCategoryCard from "../../Components/SubCategoryCard/SubCategoryCard";
 const API_URL = "http://localhost:8585/api"; // Replace with your actual API URL
 
 const getSubCategories = async (catid) => {
@@ -41,26 +40,9 @@ const SubCategory = () => {
 
       <div className="row">
         {subcategories &&
-          subcategories.map((subcategories) => (
-            <div key={subcategories._id} className="col-md-4 col-xs-6">
-              <div className={styles.shop}>
-                <div className={styles.shopImg}>
-                  <img src={subcategories.imageurl} alt="" />
-                </div>
-                <div className={styles.shopBody}>
-                  <h3>
-                    {subcategories.name}
-                    <br />
-                    Collection
-                  </h3>
-                  <Link
-                    to={`/products/${subcategories._id}`}
-                    className={styles.ctaBtn}
-                  >
-                    Shop now <FaArrowCircleRight />
-                  </Link>
-                </div>
-              </div>
+          subcategories.map((subcategory) => (
+            <div key={subcategory._id} className="col-md-4 col-xs-6">
+              <SubCategoryCard subcategory={subcategory} />
             </div>
           ))}
       </div>

@@ -1,5 +1,5 @@
 import Container from "../../Components/Container/Container";
-import Product from "../../Components/Product/Product";
+import Product from "../../Components/ProductCard/ProductCard";
 
 const Products = () => {
   return (

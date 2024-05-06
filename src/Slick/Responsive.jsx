@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./react-slick.css";
-import Product from "../Components/Product/Product";
+import Product from "../Components/ProductCard/ProductCard";
 
 function Responsive() {
   var settings = {

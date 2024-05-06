@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./product.module.css";
+import styles from "./productcard.module.css";
 /* eslint-disable react/prop-types */
 import {
   FaStar,
