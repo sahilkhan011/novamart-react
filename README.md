@@ -39,7 +39,7 @@ Before running the project, ensure you have the following software installed on 
 2. Navigate to the project directory:
 
    ```bash
-   cd online-grocery-react
+   cd novamart-react
    ```
 
 3. Install dependencies using npm:
