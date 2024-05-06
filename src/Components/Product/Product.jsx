@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./product.module.css";
 /* eslint-disable react/prop-types */
 import {
@@ -22,10 +23,10 @@ const Product = ({
       <div className={`${styles.product} shadow`}>
         <div className="card-body">
           <div className={styles.productImage}>
-            <a href="#" className={styles.image}>
+            <Link to={`/product/sadf`} className={styles.image}>
               <img className={styles.pic1} src={image1} alt="Product 1" />
               <img className={styles.pic2} src={image2} alt="Product 2" />
-            </a>
+            </Link>
             <div className={`${styles.productLabel} d-flex `}>
               {newLabel && <span className={styles.newLabel}>{newLabel}</span>}
               {saleLabel && (
