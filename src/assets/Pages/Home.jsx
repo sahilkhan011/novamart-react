@@ -1,6 +1,7 @@
 import CategoryNav from "../../Components/CategoryNav/CategoryNav";
 import Container from "../../Components/Container/Container";
 import Slideshow from "../../Components/SlideShow/Slideshow";
+import Responsive from "../../Slick/Responsive";
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
           <div className="bg-danger" style={{ height: "200px" }}></div>
         </div>
       </div>
+
+      <Responsive />
     </Container>
   );
 };

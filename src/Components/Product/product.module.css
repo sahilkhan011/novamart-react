@@ -4,7 +4,7 @@
   font-family: "Poppins", sans-serif;
   text-align: center;
   transition: all 0.7s ease 0s;
-  margin-bottom: 50px;
+  margin: 10px 10px 50px 10px !important;
 }
 .productGrid .product {
   position: relative;
