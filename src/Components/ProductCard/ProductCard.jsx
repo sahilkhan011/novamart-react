@@ -8,7 +8,7 @@ import {
   // FaChevronLeft,
   // FaChevronRight,
 } from "react-icons/fa";
-const Product = ({
+const ProductCard = ({
   image1,
   image2,
   newLabel,
@@ -85,4 +85,4 @@ const Product = ({
   );
 };
 
-export default Product;
+export default ProductCard;

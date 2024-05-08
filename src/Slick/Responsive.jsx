@@ -2,9 +2,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./react-slick.css";
-import Product from "../Components/ProductCard/ProductCard";
+import ProductCard from "../Components/ProductCard/ProductCard";
 
-function Responsive() {
+const Responsive = () => {
   var settings = {
     dots: true,
     infinite: false,
@@ -44,7 +44,7 @@ function Responsive() {
       <div className="slider-container">
         <Slider {...settings}>
           <div>
-            <Product
+            <ProductCard
               image1="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               image2="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               newLabel="New"
@@ -56,7 +56,7 @@ function Responsive() {
             />
           </div>
           <div>
-            <Product
+            <ProductCard
               image1="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               image2="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               newLabel="New"
@@ -68,7 +68,7 @@ function Responsive() {
             />
           </div>
           <div>
-            <Product
+            <ProductCard
               image1="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               image2="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               newLabel="New"
@@ -80,7 +80,7 @@ function Responsive() {
             />
           </div>
           <div>
-            <Product
+            <ProductCard
               image1="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               image2="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               newLabel="New"
@@ -92,7 +92,7 @@ function Responsive() {
             />
           </div>
           <div>
-            <Product
+            <ProductCard
               image1="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               image2="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               newLabel="New"
@@ -104,7 +104,7 @@ function Responsive() {
             />
           </div>
           <div>
-            <Product
+            <ProductCard
               image1="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               image2="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               newLabel="New"
@@ -116,7 +116,7 @@ function Responsive() {
             />
           </div>
           <div>
-            <Product
+            <ProductCard
               image1="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               image2="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               newLabel="New"
@@ -128,7 +128,7 @@ function Responsive() {
             />
           </div>
           <div>
-            <Product
+            <ProductCard
               image1="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               image2="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               newLabel="New"
@@ -140,7 +140,7 @@ function Responsive() {
             />
           </div>
           <div>
-            <Product
+            <ProductCard
               image1="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               image2="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
               newLabel="New"
@@ -156,6 +156,6 @@ function Responsive() {
       <div className="spacer" style={{ height: "30px" }}></div>
     </>
   );
-}
+};
 
 export default Responsive;

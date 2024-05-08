@@ -1,13 +1,11 @@
-import Container from "../../Components/Container/Container";
-import Product from "../../Components/ProductCard/ProductCard";
-
+import ProductCard from "../../Components/ProductCard/ProductCard";
 const Products = () => {
   return (
-    <Container>
+    <>
       <h1>Products Page</h1>
       <div className="row">
         <div className={`col-md-3 col-sm-6`}>
-          <Product
+          <ProductCard
             image1="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
             image2="https://www.prepbootstrap.com/Content/images/template/productslider/product_002.jpg"
             newLabel="New"
@@ -19,7 +17,7 @@ const Products = () => {
           />
         </div>
         <div className={`col-md-3 col-sm-6`}>
-          <Product
+          <ProductCard
             image1="https://www.prepbootstrap.com/Content/images/template/productslider/product_001.jpg"
             image2="https://www.prepbootstrap.com/Content/images/template/productslider/product_001.jpg"
             title="Women's Top"
@@ -29,7 +27,7 @@ const Products = () => {
           />
         </div>
       </div>
-    </Container>
+    </>
   );
 };
 

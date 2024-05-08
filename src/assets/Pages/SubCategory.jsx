@@ -1,4 +1,3 @@
-import Container from "../../Components/Container/Container";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -35,7 +34,7 @@ const SubCategory = () => {
   }, []); // Run the effect only once on mount
 
   return (
-    <Container>
+    <>
       <h1>SubCategory Page</h1>
 
       <div className="row">
@@ -46,7 +45,7 @@ const SubCategory = () => {
             </div>
           ))}
       </div>
-    </Container>
+    </>
   );
 };
 

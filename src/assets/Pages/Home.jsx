@@ -1,11 +1,10 @@
 import CategoryNav from "../../Components/CategoryNav/CategoryNav";
-import Container from "../../Components/Container/Container";
 import Slideshow from "../../Components/SlideShow/Slideshow";
 import Responsive from "../../Slick/Responsive";
 
 const Home = () => {
   return (
-    <Container>
+    <>
       <CategoryNav />
 
       <div className="row">
@@ -19,7 +18,7 @@ const Home = () => {
       </div>
 
       <Responsive />
-    </Container>
+    </>
   );
 };
 export default Home;

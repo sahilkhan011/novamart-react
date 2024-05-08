@@ -11,6 +11,8 @@ import Products from "./assets/Pages/Products";
 import Login from "./assets/Pages/Login";
 import Register from "./assets/Pages/Register";
 import SignIn from "./assets/Pages/SignIn";
+import Product from "./assets/Pages/Product";
+import Container from "./Components/Container/Container";
 
 function App() {
   return (
@@ -37,14 +39,17 @@ function App() {
           element={
             <>
               <Header />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/store" element={<Store />} />
-                <Route path="/subcategory/:catid" element={<SubCategory />} />
-                <Route path="/products/:subcatid" element={<Products />} />
-              </Routes>
+              <Container>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/store" element={<Store />} />
+                  <Route path="/subcategory/:catid" element={<SubCategory />} />
+                  <Route path="/products/:subcatid" element={<Products />} />
+                  <Route path="/product/:productid" element={<Product />} />
+                </Routes>
+              </Container>
               <Footer />
             </>
           }
