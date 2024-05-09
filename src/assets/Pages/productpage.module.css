@@ -30,14 +30,6 @@
   right: 0;
 }
 
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
-
 .frameImg {
   width: 100%;
   aspect-ratio: 1/1;

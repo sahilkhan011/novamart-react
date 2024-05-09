@@ -4,6 +4,7 @@ import { FaChevronLeft, FaChevronRight, FaShoppingCart } from "react-icons/fa";
 import newTagImage from "./../new_tag.gif";
 
 import Responsive from "../../Slick/Responsive";
+import Heading from "../../Components/Heading/Heading";
 
 const ProductPage = () => {
   const [images, setImages] = useState([]);
@@ -144,9 +145,9 @@ const ProductPage = () => {
             </div>
           </div>
         </div>
-        <h1>Related Products</h1>
+        <Heading>Related Products</Heading>
         <Responsive />
-        <h1>Trending Products</h1>
+        <Heading>Trending Products</Heading>
         <Responsive />
       </div>
     </div>

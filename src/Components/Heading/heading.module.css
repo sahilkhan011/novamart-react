@@ -1,0 +1,26 @@
+.title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+.title h3 {
+  display: inline;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 3px solid #d10024;
+  background-color: #fff;
+  padding: 3px;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background-color: #d10024;
+  z-index: -1;
+}

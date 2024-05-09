@@ -1,4 +1,5 @@
 import CategoryNav from "../../Components/CategoryNav/CategoryNav";
+import Heading from "../../Components/Heading/Heading";
 import Slideshow from "../../Components/SlideShow/Slideshow";
 import Responsive from "../../Slick/Responsive";
 
@@ -16,7 +17,9 @@ const Home = () => {
           <div className="bg-danger" style={{ height: "200px" }}></div>
         </div>
       </div>
-
+      <Heading>Related Products</Heading>
+      <Responsive />
+      <Heading>Trending Products</Heading>
       <Responsive />
     </>
   );
