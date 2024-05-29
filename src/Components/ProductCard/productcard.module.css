@@ -4,7 +4,7 @@
   font-family: "Poppins", sans-serif;
   text-align: center;
   transition: all 0.7s ease 0s;
-  margin: 10px 10px 50px 10px !important;
+  margin: 5px 5px 50px 10px !important;
 }
 .productGrid .product {
   position: relative;
@@ -190,6 +190,7 @@
 
 .productGrid .bottomAddtoCart {
   position: absolute;
+  font-size: 13px;
   left: 1px;
   right: 1px;
   bottom: 1px;
