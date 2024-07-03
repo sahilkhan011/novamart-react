@@ -1,14 +1,12 @@
-import { useContext, useRef } from "react";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
 import styles from "./login.module.css";
-import { UserSessionContext } from "../../store/UserSessionStore";
-import { ReactSession } from "react-client-session";
-
-ReactSession.setStoreType("localStorage");
-
+import { useDispatch } from "react-redux";
+import { loginUser } from "../features/userSlice";
 export default function Login() {
-  const { createSession } = useContext(UserSessionContext);
+  const dispatch = useDispatch();
   const usernameRef = useRef("");
   const passwordRef = useRef("");
   const navigate = useNavigate(); // Access the history object
@@ -30,15 +28,15 @@ export default function Login() {
       password: passwordValue,
     };
 
-    const apiUrl = "http://localhost:8585/api/user/login";
+    const apiUrl = "https://onlinegrocery-node-api.onrender.com/api/user/login";
 
     try {
       const response = await axios.post(apiUrl, formData);
       //console.log("Response Data:", response.data);
 
       if (response.data.status) {
-        ReactSession.set("user-id", response.data.user._id);
-        createSession(response.data.user._id);
+        localStorage.setItem("user-id", response.data.user._id);
+        dispatch(loginUser(response.data.user));
         navigate("/");
       }
     } catch (error) {

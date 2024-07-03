@@ -6,11 +6,14 @@ import styles from "./header.module.css";
 import { FaHeart, FaUser, FaSearch } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
 import { IoMdCart } from "react-icons/io";
-import { UserSessionContext } from "../../store/UserSessionStore";
-import { useContext } from "react";
+import { logoutUser } from "../../assets/features/userSlice";
+
+import { useSelector, useDispatch } from "react-redux";
 
 const Header = () => {
-  const { userInfo, logout } = useContext(UserSessionContext);
+  const dispatch = useDispatch();
+  const userInfo = useSelector((state) => state.user);
+  //console.log("userInfo:", userInfo);
   //console.log(userInfo);
   return (
     <>
@@ -57,7 +60,7 @@ const Header = () => {
                 <div className={styles.qty}>99</div>
               </div>
 
-              {userInfo && (
+              {userInfo.isLoggedIn && (
                 <div
                   className={`${styles.iconContainer}`}
                   onClick={() => {
@@ -65,11 +68,11 @@ const Header = () => {
                   }}
                 >
                   <FaUser size={20} color="red" />
-                  <span>{userInfo ? userInfo.name : "Null"}</span>
+                  <span>{userInfo ? userInfo.data.name : "Null"}</span>
                 </div>
               )}
 
-              {!userInfo && (
+              {!userInfo.isLoggedIn && (
                 <div
                   className={`${styles.iconContainer}`}
                   onClick={() => {
@@ -83,11 +86,11 @@ const Header = () => {
                 </div>
               )}
 
-              {userInfo && (
+              {userInfo.isLoggedIn && (
                 <div
                   className={`${styles.iconContainer}`}
                   onClick={() => {
-                    logout();
+                    dispatch(logoutUser());
                     //console.log("clicked");
                   }}
                 >

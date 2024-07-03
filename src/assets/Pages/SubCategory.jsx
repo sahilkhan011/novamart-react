@@ -1,18 +1,8 @@
 import { useParams } from "react-router-dom";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import SubCategoryCard from "../../Components/SubCategoryCard/SubCategoryCard";
-const API_URL = "http://localhost:8585/api"; // Replace with your actual API URL
 
-const getSubCategories = async (catid) => {
-  try {
-    const response = await axios.get(`${API_URL}/subcategory/bycatid/${catid}`);
-    return response.data;
-  } catch (error) {
-    console.error("Error fetching categories:", error);
-    throw error;
-  }
-};
+import { fetchSubCategories } from "./../../store/ApiCalls";
 
 const SubCategory = () => {
   const [subcategories, setSubCategories] = useState([]);
@@ -21,8 +11,8 @@ const SubCategory = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const subcategoriesData = await getSubCategories(catid);
-        console.log(subcategoriesData);
+        const subcategoriesData = await fetchSubCategories(catid);
+        //console.log(subcategoriesData);
         setSubCategories(subcategoriesData);
         // Do something with the categoriesData, such as setting it in state
       } catch (error) {

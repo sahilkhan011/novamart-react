@@ -1,21 +1,18 @@
-import { useContext, useRef } from "react";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import styles from "./register.module.css"; // Make sure to create a CSS module for styling
-import { UserSessionContext } from "../../store/UserSessionStore";
-import { ReactSession } from "react-client-session";
-
-ReactSession.setStoreType("localStorage");
+import { useDispatch } from "react-redux";
+import { loginUser } from "../features/userSlice";
 
 export default function Register() {
-  const { createSession } = useContext(UserSessionContext);
   const nameRef = useRef("");
   const genderRef = useRef("");
   const mobileRef = useRef("");
   const passwordRef = useRef("");
   const imageRef = useRef(null); // Reference to the file input element
   const navigate = useNavigate(); // Access the history object
-
+  const dispatch = useDispatch();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -40,7 +37,7 @@ export default function Register() {
 
     console.log(formData);
 
-    const apiUrl = "http://localhost:8585/api/user/"; // Change the API endpoint accordingly
+    const apiUrl = "https://onlinegrocery-node-api.onrender.com/api/user/"; // Change the API endpoint accordingly
 
     try {
       const response = await axios.post(apiUrl, formData, {
@@ -54,9 +51,8 @@ export default function Register() {
       if (response.status === 201) {
         alert(response.data.message);
         // HTTP status code 201 indicates success
-
-        ReactSession.set("user-id", response.data.user._id);
-        createSession(response.data.user._id);
+        localStorage.setItem("user-id", response.data.user._id);
+        dispatch(loginUser(response.data.user));
         navigate("/");
       }
     } catch (error) {

@@ -1,5 +1,3 @@
-import Container from "../../Components/Container/Container";
-
 const Store = () => {
   return (
     <>
